@@ -16,7 +16,7 @@ if ($result->num_rows === 1) {
     
     if (password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        header("Location: ../request.html");
+        header("Location: ../index.html");
     } else {
         $_SESSION['errmsg'] = "Invalid password!";
         header("Location: ../login.html");

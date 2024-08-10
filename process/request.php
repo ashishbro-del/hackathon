@@ -53,18 +53,17 @@ if ($stmt->execute()) {
 
     $mail = new PHPMailer(true);
     try {
-         var_dump('lok');
         $mail->isSMTP();                                         
         $mail->Host       = 'smtp.gmail.com';                  
         $mail->SMTPAuth   = true;                             
-        $mail->Username   = 'kushalbhatta48@gmail.com';           
-        $mail->Password   = 'Ku1sh2al3@#';                     
-        $mail->SMTPSecure = false;    
-        $mail->Port       = 1025;  
-        $mail->SMTPDebug = 4;                                      
+        $mail->Username   = 'alamichhane961@gmail.com';           
+        $mail->Password   = 'yydr qltk bsbb pwbj';                     
+        $mail->SMTPSecure = 'ssl';    
+        $mail->Port       = 465;  
+        $mail->SMTPDebug = 0; // Disable debug output
 
-        $mail->setFrom('asdf@asdf.com', 'Blood Donation');
-        $mail->addAddress('kushalbhatta48@gmail.com');                               
+        $mail->setFrom('alamichhane961@gmail.com', 'Ashish Lamichhane');
+        $mail->addAddress($_POST['email']);                               
 
         $mail->isHTML(true);                                    
         $mail->Subject = 'Blood Request Received';
