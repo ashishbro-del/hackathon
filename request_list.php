@@ -83,7 +83,7 @@ if ($stmt) {
                 <th>Province</th>
                 <th>City</th>
                 <th>Email</th>
-                
+                <th>doctor's recommendation</th>
             </tr>
         </thead>
         <tbody>
@@ -93,7 +93,7 @@ if ($stmt) {
                 <td><?php echo htmlspecialchars($row['province']); ?></td>
                 <td><?php echo htmlspecialchars($row['city']); ?></td>
                 <td><?php echo htmlspecialchars($row['email']); ?></td>
-                
+                <td><?php echo htmlspecialchars($row['doctors recommEndation']); ?></td>
             </tr>
         <?php } ?>
         </tbody>

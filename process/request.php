@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../db_config.php'); // Ensure this path is correct based on your directory structure
+include('db_config.php'); 
 
 require_once '../PHPMailer/src/Exception.php';
 require_once '../PHPMailer/src/PHPMailer.php';
@@ -20,51 +20,51 @@ $province = $_POST['province'];
 $city = $_POST['city'];
 $email = $_POST['email'];
 
-// Handle file upload
 $target_dir = "../uploads/";
-$target_file = $target_dir . basename($_FILES["recommendation-file"]["name"]);
-$file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+// $target_file = $target_dir . basename($_FILES["recommendation-file"]["name"]);
+// $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-// Validate file type
-$allowed_types = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
-if (!in_array($file_type, $allowed_types)) {
-    $_SESSION['errmsg'] = "Only PDF, DOC, DOCX, JPG, JPEG, and PNG files are allowed.";
-    header("Location: ../request.html");
-    exit();
-}
 
-// Move the file to the target directory
-if (!move_uploaded_file($_FILES["recommendation-file"]["tmp_name"], $target_file)) {
-    $_SESSION['errmsg'] = "Sorry, there was an error uploading your file.";
-    header("Location: ../request.html");
-    exit();
-}
+// $allowed_types = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
+// if (!in_array($file_type, $allowed_types)) {
+//     $_SESSION['errmsg'] = "Only PDF, DOC, DOCX, JPG, JPEG, and PNG files are allowed.";
+//     header("Location: ../request.html");
+//     exit();
+// }
 
-// Insert the data into the database
-$sql = "INSERT INTO requests_blood (user_id, blood_group, province, city, email, recommendation_file) VALUES (?, ?, ?, ?, ?, ?)";
+// if (!move_uploaded_file($_FILES["recommendation-file"]["tmp_name"], $target_file)) {
+//     $_SESSION['errmsg'] = "Sorry, there was an error uploading your file.";
+//     header("Location: ../request.html");
+//     exit();
+// }
+
+
+$sql = "INSERT INTO blood_requests (blood_group, province, city, email) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
 if ($stmt === false) {
     die('Prepare failed: ' . htmlspecialchars($conn->error));
 }
 
-$stmt->bind_param("isssss", $user_id, $blood_group, $province, $city, $email, $target_file);
+$stmt->bind_param('ssss', $blood_group, $province, $city, $email);
 
 if ($stmt->execute()) {
     $_SESSION['successmsg'] = "Request submitted successfully!";
 
     $mail = new PHPMailer(true);
     try {
+         var_dump('lok');
         $mail->isSMTP();                                         
-        $mail->Host       = 'smtp.example.com';                  
+        $mail->Host       = 'smtp.gmail.com';                  
         $mail->SMTPAuth   = true;                             
-        $mail->Username   = 'your_email@example.com';           
-        $mail->Password   = 'your_password';                     
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;    
-        $mail->Port       = 587;                                 
+        $mail->Username   = 'kushalbhatta48@gmail.com';           
+        $mail->Password   = 'Ku1sh2al3@#';                     
+        $mail->SMTPSecure = false;    
+        $mail->Port       = 1025;  
+        $mail->SMTPDebug = 4;                                      
 
-        $mail->setFrom('your_email@example.com', 'Blood Donation');
-        $mail->addAddress($email);                               
+        $mail->setFrom('asdf@asdf.com', 'Blood Donation');
+        $mail->addAddress('kushalbhatta48@gmail.com');                               
 
         $mail->isHTML(true);                                    
         $mail->Subject = 'Blood Request Received';
