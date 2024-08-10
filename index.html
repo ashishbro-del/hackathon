@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooddonation</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style> 
+   .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; 
+    font-size: 14px; 
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px; 
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #f8f8f8;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ddd;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: red;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    color: #ddd;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+   </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="./images/bloodcommunity.jpg" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">about us</a></li>
+                <li><a href="register.html">register</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="donor_list.php">donor_list</a></li>
+                <li><a href="request_list.php">requestbloodlist</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+               
+                <li><a href="process/logout.php">logout</a></li>
+               
+                
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>"Donate Blood,Save Life"</h1>
+           
+            <div>
+                <button type="button"><span></span><a href="donate.html">Donate blood</a></button>
+                <button type="button"><span></span><a href="request.html">REQUEST blood</a></button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="firstblock">
+        <div class="text">
+            <p>Patients' families in underdeveloped nations like <span>Nepal</span> bear the responsibility and worry of
+                managing and
+                transporting blood.
+            </p>
+            <br>
+            <p>
+                <span>We're working hard to fix that.</span>
+            </p>
+        </div>
+
+        <div class="img-container">
+            <img src="./images/donate.jpg" class="donate">
+        </div>
+
+    </div>
+
+    <div class="reasons-to-donate">
+        <h2>five Reasons to donate blood</h2>
+        <ol>
+          <li>Save Lives: A single donation can help multiple patients in need.</li>
+          <li> Boosts Health: Regular donation can improve heart health and reduce the risk of certain diseases.</li>  
+          <li>  Blood Supply: Helps maintain an adequate blood supply for emergencies and surgeries.</li> 
+           <li> Burns Calories: Donating blood can help burn calories and maintain a healthy weight.</li> 
+           <li> Community Contribution: It’s a simple way to give back and support your community.</li>
+            
+            
+            
+            
+            
+            
+        </ol>
+        <h3>“Donate Blood Because You Never Know How Helpful It Might Be
+            To Someone.”</h3>
+    </div>
+
+    <div class="donated-blood">
+        <h2>What happens to<span>Donated Blood?</span></h2>
+        <img src="./images/home02.png" alt="">
+        <ol>
+            <li> A pint of blood is drawn from a donor.</li>
+            <li> Blood is collected and labeled in a sterile bag.</li>
+            <li> Blood is transported to a lab for testing and processing.</li>
+            <li> Blood is processed and spun down into different components: plasma, red blood cells and platelets.</li>
+            <li> Blood is tested to ensure it is safe for transfusion.</li>
+            <li> Local hospitals place orders for blood based on specific needs.</li>
+            <li> Blood products are stored and ready for transfusion. Platelets expire in 5 days, red blood cells in 42
+                days, and plasma in 2 years.
+            <li> Blood is transferred to patients. 1 blood donation has the potential to save 3 lives.</li>
+        </ol>
+    </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Bagmati Province, Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> 9866399895</p>
+                    <p><i class="fas fa-envelope"></i> contact@bloodbank.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Donate Blood</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            
+        </footer>
+
+    
+</body>
+
+</html>

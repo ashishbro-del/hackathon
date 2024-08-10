@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blood Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: gray;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us {
+    text-align: center;
+}
+
+.about-us h1 {
+    color: #333;
+}
+
+.blood-photo {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    color: #555;
+    line-height: 1.6;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; 
+    font-size: 14px; 
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px; 
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #f8f8f8;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ddd;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: red;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    color: #ddd;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="request.html">Request Blood</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="about-us">
+            <h1>About Us</h1>
+            <img src="images/chart.jpg" alt="Blood Donation" class="blood-photo">
+            <p>Welcome to our Blood Bank. We are dedicated to saving lives by connecting blood donors with those in need of blood transfusions. Our mission is to ensure a safe and sufficient blood supply through voluntary donations. We strive to educate the community about the importance of blood donation and encourage everyone to contribute to this life-saving cause.</p>
+            <p>Our services are available 24/7 to assist patients and healthcare providers. Join us in making a difference. Donate blood, save lives.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Bagmati Province, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone"></i> 9866399895</p>
+                <p><i class="fas fa-envelope"></i> contact@bloodbank.org</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Donate Blood</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+</html>
