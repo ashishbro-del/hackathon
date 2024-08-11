@@ -16,7 +16,7 @@ if ($result->num_rows === 1) {
     
     if (password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        header("Location: ../index.html");
+        echo "<script>alert('You have successfully logged in!'); window.location.href='../index.html';</script>";
     } else {
         $_SESSION['errmsg'] = "Invalid password!";
         header("Location: ../login.html");

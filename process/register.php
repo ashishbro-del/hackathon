@@ -2,15 +2,15 @@
 session_start();
 include('db_config.php');
 
-
 $email = $_POST['email'];
 $pass1 = $_POST['pass1'];
 $pass2 = $_POST['pass2'];
 
-
 if ($pass1 !== $pass2) {
-    $_SESSION['errmsg'] = "Passwords do not match!";
-    header("Location: ../register.html");
+    echo "<script>
+        alert('Passwords do not match!');
+        window.location.href='../register.html';
+    </script>";
     exit();
 }
 
@@ -21,11 +21,15 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $email, $hashed_password);
 
 if ($stmt->execute()) {
-    $_SESSION['successmsg'] = "Registration successful!";
-    header("Location: ../login.html");
+    echo "<script>
+        alert('Registration successful!');
+        window.location.href='../login.html';
+    </script>";
 } else {
-    $_SESSION['errmsg'] = "Registration failed!";
-    header("Location: ../register.html");
+    echo "<script>
+        alert('Registration failed!');
+        window.location.href='../register.html';
+    </script>";
 }
 
 $stmt->close();

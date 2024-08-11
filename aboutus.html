@@ -127,8 +127,145 @@ main {
         text-align: center;
     }
 
-    .footer-section {
-        margin: 20px 0;
+    
+}
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#branding h1 {
+    margin: 0;
+}
+
+#branding .highlight {
+    color: #e8491d;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+nav ul li a:hover,
+nav ul li.current a {
+    background: #e8491d;
+    border-radius: 4px;
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+#newsletter {
+    background: #e8491d;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#newsletter h1 {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#main-col {
+    flex: 2;
+    padding: 1rem;
+}
+
+#main-col h1 {
+    text-align: center;
+}
+
+#main-col h2 {
+    color: #e8491d;
+}
+
+#main-col p {
+    margin-bottom: 1rem;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 1rem;
+}
+
+.dark {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #main-col,
+    #sidebar {
+        flex: 1;
+        margin-bottom: 1rem;
     }
 }
 
@@ -138,21 +275,46 @@ main {
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">about us</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="request.html">Request Blood</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="donor_list.php">donor_list</a></li>
+          
+            <li><a href="contactus.html">Contact us</a></li>
+           
+            <li><a href="process/logout.php">logout</a></li>
+           
+            
         </ul>
     </nav>
 
-    <main>
-        <section class="about-us">
-            <h1>About Us</h1>
-            <img src="images/chart.jpg" alt="Blood Donation" class="blood-photo">
-            <p>Welcome to our Blood Bank. We are dedicated to saving lives by connecting blood donors with those in need of blood transfusions. Our mission is to ensure a safe and sufficient blood supply through voluntary donations. We strive to educate the community about the importance of blood donation and encourage everyone to contribute to this life-saving cause.</p>
-            <p>Our services are available 24/7 to assist patients and healthcare providers. Join us in making a difference. Donate blood, save lives.</p>
-        </section>
-    </main>
+    
+    <section id="newsletter">
+        <div class="container">
+            <h1>Register For More Access</h1>
+            
+        </div>
+    </section>
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <center><h1>This is About Us</h1></center>
+                    
+                  <h2>Mission</h2>
+<p>Saving lives by providing blood and biomedical services
+
+What this means to you:
+Through effective outreach to donors, continual development of biomedical expertise, and brand-building partnerships with the community, blood drive sponsors, and health care facilities, Nebraska Community Blood Bank connects those who need blood with those generous volunteers who give.</p>
+
+<h2>Vision</h2>
+                    <p>
+To be the best blood center in America
+
+What this means to you: 
+Dedicated to quality, integrity, service, and excellence in everything we do, Nebraska Community Blood Bank works to ensure reliable and streamlined access to a stable supply of safe blood and related products wherever they are needed. We aim to become the industry’s standard-bearer in providing the highest level of service to all the various stakeholders we serve—from financial contributors, blood donors, and blood drive sponsors to hospital partners, and biotechnology companies.
+                    </p>
+                </article>
+              
+            </div>
     <footer class="footer">
         <div class="container">
             <div class="footer-section">
