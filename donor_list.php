@@ -129,9 +129,62 @@ $result = $conn->query($sql);
         .delete-btn:hover {
             background-color: #c82333;
         }
+        /* Navigation Bar Styling */
+/* Navigation Bar Styling */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: right;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    background-color: #111;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    ul li {
+        display: block;
+        text-align: left;
+    }
+
+    ul li a {
+        padding: 12px;
+    }
+}
+
     </style>
 </head>
 <body>
+<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="donor_list.php">donor_list</a></li>
+           
+            <li><a href="contactus.html">Contact us</a></li>
+           
+            <li><a href="process/logout.php">logout</a></li>
+           
+            
+        </ul>
     <div class="container">
         <h1>Donor List</h1>
 

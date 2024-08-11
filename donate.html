@@ -51,30 +51,48 @@
     input[type="submit"]:hover {
         background-color: #218838;
     }
-    nav {
-        background-color: gray;
-        color: white;
-        padding: 1em 0;
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: right;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    background-color: #111;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    ul li {
+        display: block;
+        text-align: left;
     }
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: right;
+
+    ul li a {
+        padding: 12px;
     }
-    nav ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+}
+
     </style>
 </head>
 <body>
-    <nav>
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">about us</a></li>
@@ -88,7 +106,7 @@
            
             
         </ul>
-    </nav>
+    
 
     <div class="container">
         <h1>Donate Blood</h1>
@@ -99,9 +117,17 @@
             <label for="age">Age:</label>
             <input type="number" min="17" max="60" id="age" name="age" required>
             
-            <label for="province">Province:</label>
-            <input type="text" id="province" name="province" required>
-            
+            <label for="province">Select Province:</label>
+            <select id="province" name="province" required>
+                <option value="" disabled selected>Select province:</option>
+                <option value="province1">Koshi province</option>
+                <option value="province2">Madhesh province</option>
+                <option value="province3">Bagmati province</option>
+                <option value="province4">Gandaki province</option>
+                <option value="province5">Lumbini province</option>
+                <option value="province6">Karnali province</option>
+                <option value="province7">Sudurpashchim province</option>
+            </select>
             <label for="district">District:</label>
             <input type="text" id="district" name="district" required>
             
